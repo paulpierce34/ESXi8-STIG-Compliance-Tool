@@ -15,3 +15,8 @@ HOW TO USE:
 - Open script in powershell ISE (or favored text editor) and replace static values such as target IP adderess
 - Execute script - you will be prompted for the credentials necessary for accessing your target ESXi host
 - Output saved to a .ckl file (located in desktop by default) as well as log file
+
+
+
+EXAMPLE:
+![MicrosoftPowerShellISE2025 02 25-15 19 45 03-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/38a79b39-e2c4-4829-8a4e-5b099dbb0aae)
