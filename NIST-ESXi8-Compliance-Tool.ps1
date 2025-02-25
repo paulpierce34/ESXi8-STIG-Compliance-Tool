@@ -8,7 +8,7 @@ Import-Module Vmware.PowerCLI
 
 ## REPLACE VALUES IN THIS SECTION BEFORE RUNNING SCRIPT ################################################
 
-$TargetServer = 192.168.5.5 ## Replace with your esxi server IP (MANDATORY replace)
+$TargetServer = "192.168.5.5" ## Replace with your esxi server IP (MANDATORY replace)
 
 [XML]$BlankFile = Get-Content -Path "$env:USERPROFILE\Desktop\blank-esxi.ckl" ## Path to blank STIG checklist file (expects version 2, release 2 benchmark date 30 Jan 2025) (replace optional)
 
@@ -19,8 +19,8 @@ $LogOutputFile = "$env:USERPROFILE\Desktop\$Timestamp-esx-stig-script-logs.txt" 
 
 ######################################################################################################
 
-
-
+## Connect to ESX host and prompt user for creds
+Connect-VIServer -Server $TargetServer
 
 
 
@@ -34,11 +34,6 @@ $LogOutputFile = "$env:USERPROFILE\Desktop\$Timestamp-esx-stig-script-logs.txt" 
 
 ## Save all vulns from the blank checklist above to a variable
 $AllVulns = $BlankFile.CHECKLIST.STIGs.iSTIG.VULN
-
-## If get-vmhost doesn't work (i.e. not connected to any vcenter/esx), attempt to connect
-if (!(Get-VMHost)){
-Connect-VIServer -Server $TargetServer
-}
 
 
 
