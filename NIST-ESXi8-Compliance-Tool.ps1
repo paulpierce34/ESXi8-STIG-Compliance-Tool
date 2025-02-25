@@ -22,7 +22,9 @@ $LogOutputFile = "$env:USERPROFILE\Desktop\$Timestamp-esx-stig-script-logs.txt" 
 ## Connect to ESX host and prompt user for creds
 Connect-VIServer -Server $TargetServer
 
-
+sleep(5)
+write-warning "About to begin STIG check process. Press enter to continue"
+pause
 
 
 
