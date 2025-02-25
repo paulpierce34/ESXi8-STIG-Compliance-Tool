@@ -20,4 +20,4 @@ HOW TO USE:
 
 EXAMPLE:
 
-![MicrosoftPowerShellISE2025 02 25-15 19 45 03-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/38a79b39-e2c4-4829-8a4e-5b099dbb0aae)
+![MicrosoftPowerShellISE2025 02 25-16 11 07 04-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/6ac1119f-cd5f-4e71-9368-ad4a201940b1)
