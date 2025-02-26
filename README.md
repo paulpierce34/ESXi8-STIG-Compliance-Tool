@@ -7,10 +7,10 @@ The first function is the STIG check, which identifies open vulnerabilities and 
 
 
 
-Pre-requisites:
+**Pre-requisites:**
 - Vmware.PowerCLI Module
 
-HOW TO USE:
+**HOW TO USE:**
 - Git clone repo to desired location
 - Open script in powershell ISE (or favored text editor) and replace static values such as target IP adderess
 - Execute script - you will be prompted for the credentials necessary for accessing your target ESXi host
