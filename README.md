@@ -22,5 +22,9 @@ EXAMPLE STIG Check:
 
 ![MicrosoftPowerShellISE2025 02 25-22 14 58 05-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c1a823c9-f5dd-471d-b2ef-956b16a66e84)
 
+Remediation Function Prompt Example (you can say no to remediating individual STIG items):
+![image](https://github.com/user-attachments/assets/de88bb4e-0e58-495d-8e01-0910ed200ef0)
+
+
 EXAMPLE Remediation Transcription Log:
 ![image](https://github.com/user-attachments/assets/177e3c9a-fe09-4efe-8a4a-3d3d34b98179)
