@@ -30,7 +30,7 @@ STIG Check:
 STIG Stats:
 ![image](https://github.com/user-attachments/assets/494a9bf8-df01-4442-9649-ac42c8aec100)
 
-Remediation Function Prompt (you can say no to remediating individual STIG items):
+Remediation Function Prompt **(you can say no to remediating individual STIG items)**:
 ![image](https://github.com/user-attachments/assets/b64f675a-5375-43ee-a6d8-f628e73dc2c9)
 
 Successful Remediation Transcription Log:
