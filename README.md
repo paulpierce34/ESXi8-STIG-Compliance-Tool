@@ -23,6 +23,7 @@ The first function is the STIG check, which identifies open vulnerabilities and 
 
 **EXAMPLES**
 STIG Check:
+
 ![MicrosoftPowerShellISE2025 02 25-22 14 58 05-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c1a823c9-f5dd-471d-b2ef-956b16a66e84)
 
 STIG Stats:
