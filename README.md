@@ -12,7 +12,7 @@ The first function is the STIG check, which identifies open vulnerabilities and 
 
 **HOW TO USE:**
 - Git clone repo to desired location
-- Open script in powershell ISE (or favored text editor) and replace static values such as target IP adderess
+- Open script in powershell ISE (or favored text editor) and replace static values such as target IP address
 - Execute script - you will be prompted for the credentials necessary for accessing your target ESXi host
 - Output saved to a .ckl file (located in desktop by default) as well as log file
 - Remediation function begins automatically, you will be prompted for each 'Open' vulnerability and if you want to execute the fix command
