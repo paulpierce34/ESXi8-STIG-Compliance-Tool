@@ -27,5 +27,5 @@ Remediation Function Prompt Example (you can say no to remediating individual ST
 
 
 
-EXAMPLE Remediation Transcription Log:
+EXAMPLE Successful Remediation Transcription Log:
 ![image](https://github.com/user-attachments/assets/177e3c9a-fe09-4efe-8a4a-3d3d34b98179)
