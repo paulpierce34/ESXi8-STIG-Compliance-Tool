@@ -15,6 +15,9 @@ HOW TO USE:
 - Open script in powershell ISE (or favored text editor) and replace static values such as target IP adderess
 - Execute script - you will be prompted for the credentials necessary for accessing your target ESXi host
 - Output saved to a .ckl file (located in desktop by default) as well as log file
+- Remediation function begins automatically, you will be prompted for each 'Open' vulnerability and if you want to execute the fix command
+- Type 'no' or 'skip' to skip remediation of prompted item
+- All remediation input/output PowerShell transcription logs will be saved on disk
 
 
 
