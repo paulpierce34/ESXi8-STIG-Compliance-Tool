@@ -23,7 +23,8 @@ The first function is the STIG check, which identifies open vulnerabilities and 
 
 **EXAMPLES:**
 
-![image](https://github.com/user-attachments/assets/47543684-643b-44db-9d81-d0932ca5ef21)
+![image](https://github.com/user-attachments/assets/89c836c2-8f58-4a35-876d-02fa58b3558c)
+
 
 
 STIG Check:
