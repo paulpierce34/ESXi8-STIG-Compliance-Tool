@@ -20,11 +20,10 @@ The first function is the STIG check, which identifies open vulnerabilities and 
 - Type 'no' or 'skip' to skip remediation of prompted item
 - All remediation input/output PowerShell transcription logs will be saved on disk
 
-
 # EXAMPLES
 
+**ESXi-8.0U1a-21813344-standard Image used for testing:**
 ![image](https://github.com/user-attachments/assets/89c836c2-8f58-4a35-876d-02fa58b3558c)
-
 
 
 **STIG Check:**
