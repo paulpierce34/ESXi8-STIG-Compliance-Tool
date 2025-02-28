@@ -1,4 +1,4 @@
-## Thus far, the purpose of this script is to automate the 'check' portion of the STIG process. In the future I will incorporate remediation
+## The purpose of this script is to automate the STIG check, checklist, and remediation parts of the system hardening process
 ## This script attempts to login to your ESXi host via connect-viserver and will prompt you for credentials.
 
 
