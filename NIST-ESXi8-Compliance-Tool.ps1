@@ -50,12 +50,15 @@ By using this IS (which includes any device attached to this IS), you consent to
 Such communications and work product are private and confidential. See User Agreement for details.
 "@
 
+
+$DODBannerConfigShort = "I've read & consent to terms in IS user agreem't"
+
 ## for use with some commands
 $esxcli = Get-EsxCli -v2
 
 #Elements in array are as follows [VulnID, {Check Cmd}, {Fix Cmd}, 'Desired Result', 'NotReviewed' (if you want to mark as not reviewed regardless of results)]
 $Vuln258728 = 'V-258728',{Get-VMHost | Get-AdvancedSetting -Name Security.AccountLockFailures},{Get-VMHost | Get-AdvancedSetting -Name Security.AccountLockFailures | Set-AdvancedSetting -Value 3},'Security.AccountLockFailures:3','$false',''
-$Vuln258729 = 'V-258729',{Get-VMHost | Get-AdvancedSetting -Name Annotations.WelcomeMessage},{Get-VMHost | Get-AdvancedSetting -Name Annotations.WelcomeMessage | Set-AdvancedSetting -Value $DODBannerConfig},'$DODBannerConfig','$false',''
+$Vuln258729 = 'V-258729',{Get-VMHost | Get-AdvancedSetting -Name Annotations.WelcomeMessage},{Get-VMHost | Get-AdvancedSetting -Name Annotations.WelcomeMessage | Set-AdvancedSetting -Value $DODBannerConfigShort},$DODBannerConfigShort,'$false',''
 $Vuln258730 = 'V-258730',{(Get-VMHost | Select Name,@{N="Lockdown";E={$_.Extensiondata.Config.LockdownMode}}).Lockdown},{},'lockdownEnabled','$false',''
 $Vuln258731 = 'V-258731',{(Get-VMHost | Get-AdvancedSetting -Name UserVars.HostClientSessionTimeout).Value},{Get-VMHost | Get-AdvancedSetting -Name UserVars.HostClientSessionTimeout | Set-AdvancedSetting -Value "900"},'900','$false',''
 $Vuln258732 = 'V-258732',{$esxcli = Get-EsxCli -v2; $arguments = $esxcli.system.security.fips140.ssh.set.CreateArgs(); $arguments.enable = $true; $esxcli.system.security.fips140.ssh.set.Invoke($arguments)},{$arguments = $esxcli.system.security.fips140.ssh.set.CreateArgs();$arguments.enable=$True;$esxcli.system.security.fips140.ssh.set.Invoke($arguments)},'true','$false',''
@@ -77,7 +80,7 @@ $Vuln258747 = 'V-258747',{Get-VMHost | Get-VMHostHba | Where {$_.Type -eq "iscsi
 $Vuln258748 = 'V-258748',{},{},'','NotReviewed',''
 $Vuln258750 = 'V-258750',{($esxcli.system.ssh.server.config.list.invoke() | Where-Object {$_.Key -eq 'ciphers'}).Value},{$esxcli = Get-EsxCli -v2; $arguments = $esxcli.system.ssh.server.config.set.CreateArgs(); $arguments.keyword = 'ciphers'; $arguments.value = 'aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr'; $esxcli.system.ssh.server.config.set.Invoke($arguments)},'aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr','',''
 $Vuln258751 = 'V-258751',{(Get-VMHost | Get-AdvancedSetting -Name DCUI.Access).Value},{},'root','',''
-$Vuln258752 = 'V-258752',{Get-VMHost | Get-AdvancedSetting -Name Config.Etc.issue},{Get-VMHost | Get-AdvancedSetting -Name Config.Etc.issue | Set-AdvancedSetting -Value $DoDBannerConfig}, $DODBannerConfig,'',''
+$Vuln258752 = 'V-258752',{Get-VMHost | Get-AdvancedSetting -Name Config.Etc.issue},{Get-VMHost | Get-AdvancedSetting -Name Config.Etc.issue | Set-AdvancedSetting -Value $DoDBannerConfigshort}, $DODBannerConfigShort,'',''
 $Vuln258753 = 'V-258753',{$esxcli = Get-EsxCli -v2; ($esxcli.system.ssh.server.config.list.invoke() | Where-Object {$_.Key -eq 'banner'}).Value},{$esxcli = Get-EsxCli -v2; $arguments = $esxcli.system.ssh.server.config.set.CreateArgs(); $arguments.keyword = 'banner'; $arguments.value = '/etc/issue'; $esxcli.system.ssh.server.config.set.Invoke($arguments)},'/etc/issue','',''
 $Vuln258754 = 'V-258754',{(Get-VMHost | Get-VMHostService | Where {$_.Label -eq "SSH"}).Running},{Get-VMHost | Get-VMHostService | Where {$_.Label -eq "SSH"} | Set-VMHostService -Policy Off; Get-VMHost | Get-VMHostService | Where {$_.Label -eq "SSH"} | Stop-VMHostService},'false','',''
 $Vuln258755 = 'V-258755',{(Get-VMHost | Get-VMHostService | Where {$_.Label -eq "ESXi Shell"}).Running},{Get-VMHost | Get-VMHostService | Where {$_.Label -eq "ESXi Shell"} | Set-VMHostService -Policy Off; Get-VMHost | Get-VMHostService | Where {$_.Label -eq "ESXi Shell"} | Stop-VMHostService},'false','',''
