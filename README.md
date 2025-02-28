@@ -21,7 +21,7 @@ The first function is the STIG check, which identifies open vulnerabilities and 
 - All remediation input/output PowerShell transcription logs will be saved on disk
 
 
-##EXAMPLES
+# EXAMPLES
 
 ![image](https://github.com/user-attachments/assets/89c836c2-8f58-4a35-876d-02fa58b3558c)
 
