@@ -40,3 +40,7 @@ The first function is the STIG check, which identifies open vulnerabilities and 
 
 **Successful Remediation Transcription Log:**
 ![image](https://github.com/user-attachments/assets/177e3c9a-fe09-4efe-8a4a-3d3d34b98179)
+
+**Exclude remediation items by list or when prompted**
+![image](https://github.com/user-attachments/assets/045d0662-0c82-49fb-aaae-33531593c1c8)
+
